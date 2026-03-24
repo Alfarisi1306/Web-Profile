@@ -28,10 +28,6 @@ body{
   align-items: center;
 }
 
-.hero-text {
-  max-width: 500px;
-}
-
 /* sembunyiin cursor asli */
 body{
     cursor: none;
