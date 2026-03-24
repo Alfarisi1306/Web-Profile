@@ -19,10 +19,6 @@ body{
     );
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* sembunyiin cursor asli */
 body{
     cursor: none;
