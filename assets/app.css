@@ -23,11 +23,6 @@ body{
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-}
-
 /* sembunyiin cursor asli */
 body{
     cursor: none;
