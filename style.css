@@ -19,10 +19,6 @@ body{
     );
 }
 
-body{
-    background: red !important;
-}
-
 /* sembunyiin cursor asli */
 body{
     cursor: none;
