@@ -1,4 +1,9 @@
 /* ================= ROOT ================= */
+/* Update di bagian paling atas CSS kamu */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
 :root {
     --primary: #b8956b;
     --primary-hover: #9f7a54;
@@ -20,8 +25,8 @@ body{
 }
 
 /* sembunyiin cursor asli */
-body{
-    cursor: none;
+a, button, .card {
+    cursor: pointer !important;
 }
 
 /* bintang */
