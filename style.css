@@ -4,10 +4,11 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif !important;
 }
 
-*, *::before, *::after {
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Biar ukuran elemen fix sesuai width/height yang lo tulis */
+    box-sizing: border-box; /* WAJIB biar ukuran gak berantakan */
+    -webkit-font-smoothing: antialiased; /* Biar font di browser apa aja tetep tajem */
 }
 
 :root {
@@ -111,7 +112,7 @@ margin-top:21px;
     top:0;
     left:0;
     height:100vh;
-    width:180px;
+    width:160px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -126,7 +127,7 @@ margin-top:21px;
     position:fixed;
     top:0;
     right:0;
-    width:145px;
+    width:130px;
     height:100vh;
     display:flex;
     flex-direction:column;
@@ -449,9 +450,10 @@ text-decoration:none;
     justify-content:flex-end;
 }
 
-.about-img img{
-    width:525px;
-    transform:translate(45px, 11px);
+.about-img img {
+    max-width: 40vw; /* Pakai viewport width biar dia skalanya ngikutin layar browser */
+    height: auto;
+    object-fit: contain;
 }
 
 /* ================= BIOGRAFI ================= */
@@ -465,11 +467,12 @@ text-decoration:none;
     background:rgba(255,255,255,0.2);
 }
 
-#Home,
-.biografi-section,
-.education-section{
-margin-left:180px;
-margin-right:145px; /* SESUAI LEBAR SIDEBAR KANAN */
+/* Pastikan margin konten utama ngikutin perubahan di atas */
+#Home, .biografi-section, .education-section, .projects, .contact-section {
+    margin-left: 160px;  
+    margin-right: 130px;
+    padding-left: 40px;  /* Kasih napas dikit */
+    padding-right: 40px;
 }
 
 .scrapbook-container{
