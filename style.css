@@ -1,4 +1,10 @@
 /* ================= ROOT ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 :root {
     --primary: #b8956b;
     --primary-hover: #9f7a54;
@@ -17,11 +23,8 @@ body{
         #e6d3b3 40%,
         #c8a27c 100%
     );
-}
-
-/* sembunyiin cursor asli */
-body{
     cursor: none;
+    scroll-padding-top: 100px;
 }
 
 /* bintang */
@@ -40,10 +43,6 @@ body{
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    scroll-padding-top: 100px;
 }
 
 /* ANIMASI MASUK */
@@ -332,12 +331,12 @@ letter-spacing:1px;
     align-items:center;
     justify-content:space-between;
     width:100%;
-    padding-left:120px;
+    padding-left:0px;
 }
 
 .home-content{
     max-width:500px;
-    margin-left:100px;
+    margin-left:0px;
 }
 
 .home-content h1{
@@ -439,8 +438,8 @@ text-decoration:none;
 }
 
 .about-img img{
-    width:525px;
-    transform:translate(45px, 11px);
+    transform:none;
+    max-width:100%;
 }
 
 /* ================= BIOGRAFI ================= */
@@ -454,11 +453,9 @@ text-decoration:none;
     background:rgba(255,255,255,0.2);
 }
 
-#Home,
-.biografi-section,
-.education-section{
-margin-left:180px;
-margin-right:145px; /* SESUAI LEBAR SIDEBAR KANAN */
+main{
+    margin-left:180px;
+    margin-right:145px;
 }
 
 .scrapbook-container{
@@ -1506,4 +1503,10 @@ border-bottom:1px solid rgba(0,0,0,0.05);
 @keyframes spin{
     from{ transform: rotate(0deg); }
     to{ transform: rotate(360deg); }
+}
+
+section{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
 }
