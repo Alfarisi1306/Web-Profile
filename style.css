@@ -4,6 +4,12 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif !important;
 }
 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Biar ukuran elemen fix sesuai width/height yang lo tulis */
+}
+
 :root {
     --primary: #b8956b;
     --primary-hover: #9f7a54;
