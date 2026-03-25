@@ -23,7 +23,7 @@ body{
         #e6d3b3 40%,
         #c8a27c 100%
     );
-    cursor: none;
+    cursor: default;
     scroll-padding-top: 100px;
 }
 
@@ -613,10 +613,6 @@ padding:100px 10%;
 background:rgba(255,255,255,0.15);
 }
 
-section{
-padding-top:120px;
-}
-
 .education-table tbody tr{
 transition:0.2s;
 }
@@ -790,8 +786,6 @@ border-bottom:1px solid rgba(0,0,0,0.05);
 
 .projects {
     padding: 60px;
-    margin-left:180px;
-    margin-right:145px;
 }
 
 .section-title{
@@ -890,7 +884,7 @@ border-bottom:1px solid rgba(0,0,0,0.05);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 
 /* CONTENT */
@@ -1183,8 +1177,12 @@ border-bottom:1px solid rgba(0,0,0,0.05);
 .contact-section{
     min-height:100vh;
     padding:100px 10%;
-    margin-left:180px;
-    margin-right:145px;
+}
+
+.projects,
+.contact-section {
+    margin-left:0;
+    margin-right:0;
 }
 
 .contact-container {
@@ -1509,4 +1507,40 @@ section{
     width:100%;
     max-width:1200px;
     margin:auto;
+}
+
+@media (max-width: 900px){
+
+    .sidebar-left,
+    .sidebar-right{
+        display:none;
+    }
+
+    .mobile-nav{
+        display:flex;
+    }
+
+    main{
+        margin:0;
+    }
+
+    .home-container{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .scrapbook-container{
+        grid-template-columns:1fr;
+        margin-left:0;
+        text-align:center;
+    }
+
+    .contact-container{
+        flex-direction:column;
+    }
+
+    .projects{
+        padding:30px;
+    }
 }
