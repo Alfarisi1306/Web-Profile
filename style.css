@@ -42,6 +42,11 @@ body {
     transition: transform 0.15s ease, font-size 0.2s ease;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* ANIMASI MASUK */
 .fade-in {
     opacity: 0;
@@ -315,30 +320,25 @@ letter-spacing:1px;
 
 /* ================= HOME SECTION ================= */
 
-/* ================= LAYOUT FIX ================= */
-/* Semua section & footer harus pake variabel margin yang sama */
-#Home, 
-.biografi-section, 
-.education-section, 
-.projects, 
-.contact-section, 
-.footer {
-    margin-left: var(--sidebar-left-w) !important;
-    margin-right: var(--sidebar-right-w) !important;
-    width: auto; 
+#Home{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 65px;
 }
 
-.home-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Ubah ke center biar enak diliat */
-    width: 100%;
-    gap: 40px; /* Kasih jarak antara teks dan foto */
+.home-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding-left:120px;
 }
 
-.home-content {
-    max-width: 500px;
-    /* margin-left dihapus karena sudah diatur margin section */
+.home-content{
+    max-width:500px;
+    margin-left:100px;
 }
 
 .home-content h1{
@@ -453,6 +453,13 @@ text-decoration:none;
     align-items:center;
     justify-content:center;
     background:rgba(255,255,255,0.2);
+}
+
+#Home,
+.biografi-section,
+.education-section{
+margin-left:180px;
+margin-right:145px; /* SESUAI LEBAR SIDEBAR KANAN */
 }
 
 .scrapbook-container{
@@ -1500,25 +1507,4 @@ border-bottom:1px solid rgba(0,0,0,0.05);
 @keyframes spin{
     from{ transform: rotate(0deg); }
     to{ transform: rotate(360deg); }
-}
-
-@media (max-width: 992px) {
-    .sidebar-left, .sidebar-right {
-        display: none; /* Sembunyiin sidebar di tablet/HP */
-    }
-    
-    .mobile-nav {
-        display: flex; /* Munculin menu mobile */
-    }
-
-    #Home, .biografi-section, .education-section, .projects, .contact-section, .footer {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 80px 5% 40px; /* Kasih padding biar gak nempel tembok */
-    }
-
-    .home-container {
-        flex-direction: column-reverse; /* Foto di atas, teks di bawah */
-        text-align: center;
-    }
 }
