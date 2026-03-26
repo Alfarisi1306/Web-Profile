@@ -15,7 +15,6 @@
 
 body{
     min-height:100vh;
-    display: flex;
     font-family:'Poppins',sans-serif;
     background:linear-gradient(
         135deg,
