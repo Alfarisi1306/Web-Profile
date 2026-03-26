@@ -1,11 +1,4 @@
 /* ================= GLOBAL RESET & BOX MODEL ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* KUNCI UTAMA: Biar ukuran gak ngebengkak */
-    -webkit-font-smoothing: antialiased;
-}
-
 /* ================= ROOT ================= */
 :root {
     --primary: #b8956b;
