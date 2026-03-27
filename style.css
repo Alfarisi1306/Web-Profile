@@ -220,17 +220,16 @@ a  { text-decoration: none; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 10px;
+    justify-content: space-between; /* ✅ bagi rata */
+    padding: 25px 10px 25px 10px; /* ✅ padding atas bawah sama */
     background: rgba(255,255,255,0.7);
     backdrop-filter: blur(15px);
     border-left: 1px solid rgba(0,0,0,0.08);
-    z-index: 1000;
 }
 
 /* JAM */
 .clock-box {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 #clock {
@@ -238,11 +237,12 @@ a  { text-decoration: none; }
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--text-dark);
+    margin-bottom: 25px;
     font-family: 'Playfair Display', serif;
 }
 
 #date {
-    font-size: 11px;
+    font-size: 10px;
     color: #6b5c45;
     line-height: 1.4;
     text-transform: uppercase;
@@ -255,12 +255,10 @@ a  { text-decoration: none; }
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    letter-spacing: 5px;
+    font-size: 25px;
+    letter-spacing: 4px;
     color: var(--text-dark);
     text-align: center;
-    opacity: 0.8;
-    margin-top: 10px; /* Sedikit turun kebawah sesuai request */
 }
 
 /* MUSIC BUTTON ✅ tidak absolute lagi */
@@ -277,7 +275,8 @@ a  { text-decoration: none; }
     justify-content: center;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     transition: 0.3s;
-    margin-bottom: 5px
+    position: static; /* ✅ bukan absolute */
+    flex-shrink: 0;
 }
 
 .music-icon {
@@ -285,16 +284,20 @@ a  { text-decoration: none; }
     transition: 0.3s;
 }
 
-#music-btn:hover, .bottom-logos img:hover {
+#music-btn:hover {
     transform: scale(1.1);
 }
+
 #music-btn.playing {
-    box-shadow: 0 0 0 5px rgba(184,149,107,0.2), 0 0 18px rgba(184,149,107,0.5);
+    box-shadow:
+        0 0 0 5px rgba(184,149,107,0.2),
+        0 0 18px rgba(184,149,107,0.5);
 }
 
 #music-btn.playing .music-icon {
     animation: spin 3s linear infinite;
 }
+
 @keyframes spin {
     from { transform: rotate(0deg); }
     to   { transform: rotate(360deg); }
@@ -304,17 +307,19 @@ a  { text-decoration: none; }
 .bottom-logos {
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    margin-bottom: 20px; /* Jarak ke teks vertikal */
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
 }
 
 .bottom-logos img {
-    width: 42px;
-    height: 42px;
-    padding: 5px;
+    width: 46px;  /* ✅ samain ukuran dengan tombol musik */
+    height: 46px; /* ✅ samain tinggi */
+    padding: 6px;
     background: white;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 50%; /* ✅ bulat seperti tombol musik */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     object-fit: contain;
 }
 
