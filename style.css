@@ -255,10 +255,14 @@ a  { text-decoration: none; }
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: 4px;
     color: var(--text-dark);
     text-align: center;
+    flex: 1; /* ✅ tambah ini biar teks mengisi ruang tengah */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* MUSIC BUTTON ✅ tidak absolute lagi */
@@ -275,9 +279,9 @@ a  { text-decoration: none; }
     justify-content: center;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     transition: 0.3s;
-    margin-bottom: 13px;
-    position: static; /* ✅ bukan absolute */
+    position: static;
     flex-shrink: 0;
+    margin-bottom: 15px; /* ✅ tambah jarak dari logo UIB */
 }
 
 .music-icon {
